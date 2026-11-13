@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil Monte Aro</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/logo_montearo.png" type="image/x-icon">
+    </head>
+    <body>
+
+        <!-- Título "Meu Perfil" centralizado e no topo da página. -->
+        <header class="perfil-cabecalho">
+            <h1>Meu Perfil</h1>
+        </header>
+
+        <!-- Logo do canto superior esquerdo. -->
+        <img class="logo-cabecalho" src="img/logo_cabecalho.png" alt="Logo Cabeçalho">
+
+        <!-- Área principal: contém foto, informações e botões. -->
+        <div class="perfil-usuario">
+
+            <!-- A parte da "Foto de Perfil" podendo ser trocada no explorador de arquivos. -->
+            <label class="troca-foto">
+                <img class="foto-perfil" id="fotoPerfil" src="img/icone_user.png" alt="Foto do Perfil">
+                <input type="file" id="inputFoto" accept="image/*" hidden>
+            </label>
+
+            <!-- Caixa com nome, e-mail e saldo. -->
+            <div class="info-usuario">
+                <p class="nome">
+                    <img class="icone-nome" src="img/mini_foto.png" alt="">
+                    <span id="nomeTexto">Olá,...</span>
+                </p>
+
+                <div class="email-saldo">
+                    <p class="email">
+                        <img class="icone" src="img/mini_email.png" alt="Email">
+                        <span id="emailTexto">Email:</span>
+                    </p>
+                    <p class="saldo">
+                        <span class="moeda">
+                            <img class="icone-bandeira" src="img/mini_brasil.png" alt="Brasil">
+                            BR
+                        </span>
+                        R$ 0,00
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botões de "Meu Carrinho e Meus Dados". -->
+            <div class="botoes-funcionais">
+                <button>Meu Carrinho</button>
+                <button id="btnDados">Meus Dados</button>
+            </div>
+
+        </div>
+
+        <!-- Dados da nossa empresa no canto inferior direito. -->
+        <div class="endereco">
+            <p>Monte Aro - CNPJ 00.102.678/0001-10 <br>
+            Rua Sande Muller, n.°118, sala 507 - Capital - Central - São Paulo, SP</p>
+        </div>
+
+        <!-- Caixas sendo Ajuda e Institucional. -->
+        <div class="termos-politicas">
+            <dl>
+                <dt>Ajuda</dt>
+                <dd>- Suporte</dd>
+                <dd>- Termos de Uso</dd>
+                <dd>- Política de Reembolso</dd>
+                <dd>- Política de Privacidade</dd>
+                <dd>- Procon - SP</dd>
+            </dl>
+
+            <dl>
+                <dt>Institucional</dt>
+                <dd>- Sobre o site</dd>
+                <dd>- Segurança</dd>
+            </dl>
+        </div>
+
+        <!-- Idioma e país no canto inferior esquerdo. -->
+        <div class="idioma-pais">
+            <div class="idioma">
+                <p>Idioma:</p>
+                <p>Português</p>
+            </div>
+            <div class="pais">
+                <p>País:</p>
+                <p>Brasil</p>
+            </div>
+        </div>
+
+        <!-- Janelinha que ao clicar, abre "Meus Dados". -->
+        <dialog id="janelaDados">
+            <form id="formDados">
+                <h2>Meus Dados</h2>
+
+                <label>Nome
+                    <input type="text" id="campoNome">
+                </label>
+
+                <label>E-mail
+                    <input type="email" id="campoEmail">
+                </label>
+
+                <label>CPF
+                    <input type="text" id="campoCpf" placeholder="000.000.000-00" maxlength="14">
+                </label>
+
+                <label>Data de nascimento
+                    <input type="text" id="campoNascimento" placeholder="dd/mm/aaaa" maxlength="10">
+                </label>
+
+                <button type="button" id="btnCancelar">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </form>
+        </dialog>
+
+        <!-- Aqui liga o arquivo de JavaScript. -->
+        <script src="script.js"></script>
+    </body>
+</html>

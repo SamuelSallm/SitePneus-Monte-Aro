@@ -1,0 +1,332 @@
+    /*"Corpo do Perfil"*/
+        /* Fundo, cor do texto e fonte padrão da página toda. */
+body {
+    background-image: url("fundoMontearo.jpg");
+    background-size: cover;
+    color: #ffffff;
+    font-family: sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    display: flow-root;
+}
+
+
+    /* "Parte do Cabeçalho" */
+
+        /* Caixa do título "Meu Perfil", centralizada no topo. */
+.perfil-cabecalho {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #5a5a5a;
+    border-radius: 28px;
+    padding: 10px 105px;
+    background-color: rgba(0, 0, 0, 0.811);
+    backdrop-filter: blur(10px);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+        /* Logo no canto superior esquerdo. */
+.logo-cabecalho {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    height: 135px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+    /* "Área do Perfil" */
+
+        /* Organiza foto, informações e botões em colunas. */
+.perfil-usuario {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 12px;
+    margin: 150px 0 0;
+}
+
+        /* Foto de perfil redonda com borda cinza! */
+.foto-perfil {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #5a5a5a;
+}
+
+        /* Foto que ao clicar: aparece a mãozinha do mouse e ocupa a altura da caixa de informações + os botões. */
+.troca-foto {
+    display: flex;
+    cursor: pointer;
+    grid-row: span 2;
+}
+
+
+    /* "Informações do usuário" */
+
+        /* Caixa meio transparente com nome, e-mail e saldo. */
+.info-usuario {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    align-self: end;
+}
+
+        /* Espaço entre os parágrafos da caixa. */
+.info-usuario p {
+    margin: 7px 0;
+}
+
+        /* O texto "Olá, nome" grande e amarelo. */
+.info-usuario .nome {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #ffdd01;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+        /* Ícone da pessoa antes do "Olá". */
+.icone-nome {
+    width: 30px;
+    height: 30px;
+}
+
+        /* Coloca o e-mail e saldo um ao lado do outro. */
+.info-usuario .email-saldo {
+    display: flex;
+    gap: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+        /* Alinha o ícone com o texto, tanto no e-mail quanto no saldo. */
+.info-usuario .email,
+.info-usuario .saldo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+        /* Ícone do e-mail. */
+.icone {
+    width: 18px;
+    height: 18px;
+}
+
+        /* Texto do saldo em amarelo e negrito. */
+.info-usuario .saldo {
+    color: #ffe32a;
+    font-weight: bold;
+}
+
+        /* A Etiqueta "BR" ao lado do saldo. */
+.moeda {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+        /* Bandeira do Brasil dentro da etiqueta! */
+.icone-bandeira {
+    width: 24px;
+    height: auto;
+}
+
+
+    /* "Botões do Meu Carrinho / Meus Dados" */
+
+        /* Alinha os dois botões lado a lado. */
+.botoes-funcionais {
+    display: flex;
+    gap: 15px;
+    align-self: start;
+}
+
+        /* Aparência dos botões. */
+.botoes-funcionais button {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    color: #afafaf;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 14px 24px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+        /* Efeito quando o mouse passa por cima: muda a cor e sobe um pouco. */
+.botoes-funcionais button:hover {
+    color: #858585;
+    background-color: rgba(89, 89, 89, 0.9);
+    border-color: #ffd000;
+    transform: translateY(-3px);
+}
+
+        /* Efeito no momento do clique: o botão diminui. */
+.botoes-funcionais button:active {
+    transform: translateY(0) scale(0.90);
+}
+
+
+    /* "Ajuda e Institucional" */
+
+        /* Posiciona as duas caixas com as informações no canto inferior direito. */
+.termos-politicas {
+    position: absolute;
+    bottom: 90px;
+    right: 35px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+        /* Aparência de cada caixa. */
+.termos-politicas dl {
+    border: 3px solid #5a5a5a;
+    border-radius: 14px;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.811);
+    backdrop-filter: blur(10px);
+}
+
+        /* Título da caixa "Ajuda / Institucional". */
+.termos-politicas dt {
+    color: #a9a9a9;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+        /* Itens da lista "Suporte, Termos de Uso...". */
+.termos-politicas dd {
+    color: #979797;
+}
+
+
+    /* "Endereço da Empresa" */
+
+        /* Texto do CNPJ e endereço do lugar no canto inferior direito. */
+.endereco {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 35px;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    text-align: right;
+}
+
+
+    /* "Idioma e País" */
+
+        /* Caixa no canto inferior esquerdo. */
+.idioma-pais {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    border: 3px solid #5a5a5a;
+    border-radius: 16px;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.811);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 10px;
+}
+
+        /* Títulos "Idioma:" e "País:" em negrito. */
+.idioma p:first-child,
+.pais p:first-child {
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+        /* Valores "Português" e "Brasil" em cinza claro. */
+.idioma p:last-child,
+.pais p:last-child {
+    color: #a9a9a9;
+}
+
+        /* Espaço interno dos textos! */
+.idioma-pais p {
+    margin: 5px 20px;
+}
+
+
+    /* "Janelinha dos Meus Dados" */
+
+        /* Caixa da janelinha. */
+dialog {
+    background-color: rgb(20, 20, 20);
+    color: #ffffff;
+    border: 3px solid #5a5a5a;
+    border-radius: 16px;
+    padding: 25px 30px;
+}
+
+        /* Fundo escurecido atrás da janelinha. */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+        /* Título "Meus Dados". */
+dialog h2 {
+    margin-top: 0;
+    color: #a9a9a9;
+}
+
+        /* Cada campo fica em uma linha. */
+dialog label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+        /* Campos de digitar ocupam a largura toda. */
+dialog input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 8px;
+}
+
+        /* Botões Cancelar e Salvar, iguais aos botões do "Perfil". */
+dialog button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #afafaf;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 14px 24px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+        /* Efeito do mouse por cima dos botões da janelinha. */
+dialog button:hover {
+    color: #858585;
+    background-color: rgba(89, 89, 89, 0.9);
+    border-color: #ffd000;
+    transform: translateY(-3px);
+}
+
+        /* Efeito de clique dos botões da janelinha. */
+dialog button:active {
+    transform: translateY(0) scale(0.90);
+}
